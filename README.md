@@ -16,15 +16,14 @@ This is a simple Arduino sketch to control a CCS811 air quality sensor with LCD1
 
 | Component | Arduino Pin |
 |-----------|------------|
-| CCS811 SDA | A4 (SDA) |
-| CCS811 SCL | A5 (SCL) |
+| CCS811 & LCD1602 SDA | A4 (SDA) |
+| CCS811 & LCD1602 SCL | A5 (SCL) |
 | CCS811 VCC | 3.3V |
 | CCS811 GND | GND |
-| LCD1602 SDA | A4 (SDA) |
-| LCD1602 SCL | A5 (SCL) |
 | LCD1602 VCC | 5V |
-| LCD1602 GND | GND |
+| CCS811, LCD1602, Relay GND | GND |
 | Relay Signal | D4 |
+| Relay VCC | 5V |
 | Fan +12V | Relay NO (Normally Open) |
 | Fan GND | Power Supply GND |
 
