@@ -41,7 +41,6 @@ void loop() {
   if(ccs.available()){
     if(!ccs.readData()){
       int co2 = ccs.geteCO2();
-      int tvoc = ccs.getTVOC();
       
       // Update LCD display
       lcd.clear();
@@ -49,11 +48,6 @@ void loop() {
       lcd.print("CO2: ");
       lcd.print(co2);
       lcd.print(" ppm");
-      
-      lcd.setCursor(0,1);
-      lcd.print("TVOC: ");
-      lcd.print(tvoc);
-      lcd.print(" ppb");
       
       // Control fan based on CO2 levels
       if(co2 > CO2_THRESHOLD){
@@ -65,9 +59,7 @@ void loop() {
       // Print to Serial for debugging
       Serial.print("CO2: ");
       Serial.print(co2);
-      Serial.print("ppm, TVOC: ");
-      Serial.print(tvoc);
-      Serial.println("ppb");
+      Serial.println("ppm");
     }
   }
   delay(1000);  // Wait for a second before next reading
